@@ -8,19 +8,19 @@ jQuery(function($) {
         offcanvasMenuLink = $('.uk-offcanvasmenu-bar li > a'),
         logo = $('.logo');
 
-    fn = function(){
-
-        setTimeout(function () { fullscreenPos.css('height', win.height()); }, 10);
-
-    };
-
-    win.on('load resize', (function () {
-
-        fn();
-
-        return fn;
-
-    })());
+    // fn = function(){
+    //
+    //     setTimeout(function () { fullscreenPos.css('height', win.height()); }, 10);
+    //
+    // };
+    //
+    // win.on('load resize', (function () {
+    //
+    //     fn();
+    //
+    //     return fn;
+    //
+    // })());
 
     var hideOffCanvasMenu = function () {
 
