@@ -43,11 +43,11 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 /* Layouts */
 .uk-offcanvas-page{position:absolute;}
 .headerbar{position:fixed;top:0;width:100%;z-index:1000;}
-.fullscreen{background: no-repeat; background-size:cover;position:relative;}
+.fullscreen{background: no-repeat; background-size:cover;position:relative;background-color:rgba(11,51,63,1);}
 #feature{font-family:'Patua One',cursive;}
 
 /* Sponsors */
-.sponsor-images{background:rgba(11,51,63,1);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;}
+.sponsor-images{background:rgba(11,51,63,1);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;opacity:0.9;}
 .sponsor-images-small{background:rgba(11,51,63,1);}
 .sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;max-width:150px;width:100%;height:55px;filter:grayscale(100%);-webkit-filter:grayscale(100%);}
 .gold-sponsor{max-width:300px;width:100%;height:75px;}
