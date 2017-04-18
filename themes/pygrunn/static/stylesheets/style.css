@@ -49,7 +49,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 /* Sponsors */
 .sponsor-images{background:rgba(11,51,63,1);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;opacity:0.9;}
 .sponsor-images-small{background:rgba(11,51,63,1);}
-.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;max-width:150px;width:100%;height:55px;filter:grayscale(100%);-webkit-filter:grayscale(100%);}
+.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;max-width:200px;width:100%;height:60px;filter:grayscale(100%);-webkit-filter:grayscale(100%);}
 .gold-sponsor{max-width:300px;width:100%;height:75px;}
 .bronze-sponsor{max-width:100px;width:100%;height:45px;}
 .paylogic-logo{background-image:url(../images/sponsors/paylogic_light.png);}
