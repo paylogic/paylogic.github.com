@@ -86,8 +86,6 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .groningen-logo{background-image:url(../images/sponsors/groningen_light.png);}
 .zupr-logo{background-image:url(../images/sponsors/zupr_light.png);}
 
-.page-content{padding-top:96px;}
-
 /* Dropdown */
 .uk-dropdown{box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);border-radius: 3px;}
 .uk-tab-responsive .uk-dropdown{background:#0B333F;color:#FFF;}
