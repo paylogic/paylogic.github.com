@@ -18,7 +18,7 @@
 
                             <img class="with-shadow" width="80" {%- if speaker.image %}src="/images/speakers/{{ speaker.image }}"{% endif %} alt="{{ speaker.name|e }}" />
                             <span class="uk-text-middle uk-text-bold uk-margin-left">{{ speaker.name }}</span>
-                            <p class="uk-text-bold">{{ talk.fulltitle }}</p>
+                            <p class="uk-text-bold">{%- if talk.fulltitle %}{{ talk.fulltitle }}{% else %}{{ talk.title }} {% endif %}</p>
 
                             {{ talk.content }}
 
