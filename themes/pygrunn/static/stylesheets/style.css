@@ -50,7 +50,6 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 
 /* Sponsors */
 .sponsor-images{background:rgba(11,51,63,1);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;opacity:0.9;}
-.sponsor-images-small{background:rgba(11,51,63,1);width:100%;padding:15px 0;}
 .sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;max-width:200px;width:100%;height:60px;filter:grayscale(100%);-webkit-filter:grayscale(100%);}
 .gold-sponsor{max-width:300px;width:100%;height:75px;}
 .bronze-sponsor{max-width:100px;width:100%;height:45px;}
@@ -84,6 +83,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .dmc-logo{background-image:url(../images/sponsors/dmc_light.png);}
 .and-logo{background-image:url(../images/sponsors/and_light.png);}
 .groningen-logo{background-image:url(../images/sponsors/groningen_light.png);}
+.groningendigitalcity-logo{background-image:url(../images/sponsors/groningendigitalcity_light.png);}
 .zupr-logo{background-image:url(../images/sponsors/zupr_light.png);}
 
 /* Dropdown */
@@ -234,6 +234,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 
     /* Sponsors */
     .sponsor-img{margin:5px !important;}
+    .sponsor-images{position: relative;}
     /*.at-logo{max-width: 60px;}*/
 }
 
