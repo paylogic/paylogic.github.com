@@ -1,4 +1,4 @@
-:slug: kliko
+:slug: lets-make-a-graphql-api-in-python
 :speaker: oscar-vilaplana
 :year: 2017
 :title: Let's make a GraphQL API in Python
