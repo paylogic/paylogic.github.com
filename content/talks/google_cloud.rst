@@ -1,23 +1,6 @@
 :slug: google_cloud
 :speaker: lee-boonstra
 :year: 2017
-:title: Building smart Python apps on Google Cloud Platform
+:title: Machine Learning APIs for Python Developers
 
-Python makes building apps that perform at scale easy. Google Cloud lets developers push the scale
-even further, along with adding great deal of insight powered by Machine Learning. In this session
-we’re going to learn about:
-
-- How we can run Python applications on Google Cloud, debug it and scale dynamically, accommodating the most demanding load scenarios
-- Making our application smart and empowered with Machine Learning capabilities, such as:
-
-  - Language translation
-  - Sentiment analysis
-  - Image content recognition
-
-We'll build an app (code on screen, full code walkthrough, etc) that will:
-
-- Be developed in Python (Django) - we'll show all SDKs and platform functions leveraged
-- How to debug, log and monitor
-- Run on Google App Engine and scale dynamically under load
-- Leverage Google Cloud SQL (PostgreSQL) for storage
-- Tap on Machine Learning - use Translate API, Natural Language API and Vision API
+Think your business could make use of machine learning expertise when it comes to powering and improving your business applications, but do you get stuck on building and training your own custom model? During this talk, Lee Boonstra & Dmitriy Novakovskiy like to show you, a bunch of Machine Learning APIs for Python developers, (for image analysis, video analysis, speech to text, translation and sentiment detection) which can be easily integrated in your applications. We will discuss use cases, and dive into live coding demos.
