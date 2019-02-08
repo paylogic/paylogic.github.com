@@ -18,3 +18,4 @@ output/
 *.sublime-project
 *.sublime-workspace
 cache/
+/.vscode
