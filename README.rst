@@ -72,7 +72,21 @@ Publishing changes
 This repo is set up the way ``travis`` will build the static content
 automatically on every push to ``master`` branch, and then will push the
 build result to ``gh-pages`` branch, which is then served by
-``GitHub Pages``.
+``GitHub Pages``. 
+
+Travis requires an encrypted github token to be able to pull/push.
+
+See:
+First generate a Github access token:
+https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+
+Then encrypt and add that automatically to .travis.yml by running:
+travis encrypt GH_TOKEN=<your-secret-token>
+
+For more info:
+https://docs.travis-ci.com/user/deployment/pages/
+https://docs.travis-ci.com/user/environment-variables#defining-encrypted-variables-in-travisyml
+
 
 Contact
 -------
