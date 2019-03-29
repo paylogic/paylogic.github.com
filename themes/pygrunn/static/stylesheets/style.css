@@ -86,6 +86,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .groningendigitalcity-logo{background-image:url(../images/sponsors/groningendigitalcity_light.png);}
 .zupr-logo{background-image:url(../images/sponsors/zupr_light.png);}
 .satisfiedshopping-logo{background-image:url(../images/sponsors/satisfiedshopping_light.png);}
+.dreamsolution-logo{background-image:url(../images/sponsors/dreamsolution_light.png);}
 
 /* Dropdown */
 .uk-dropdown{box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);border-radius: 3px;}
@@ -259,4 +260,5 @@ only screen and (min-device-pixel-ratio: 2){
     .heroku-logo{background-image:url(../images/sponsors/heroku_light@2x.png);}
     .yourholding-logo{background-image:url(../images/sponsors/yourholding_light@2x.png);}
     .satisfiedshopping-logo{background-image:url(../images/sponsors/satisfiedshopping_light@2x.png);}
+    .dreamsolution-logo{background-image:url(../images/sponsors/dreamsolution_light@2x.png);}
 }
