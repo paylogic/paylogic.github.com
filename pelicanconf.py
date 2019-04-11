@@ -6,7 +6,7 @@ PYGRUNN_YEAR = 2019
 
 AUTHOR = u'PyGrunn Community'
 SITENAME = u'PyGrunn'
-SITEURL = 'http://pygrunn.org'
+SITEURL = 'https://pygrunn.org'
 
 TIMEZONE = 'Europe/Amsterdam'
 
