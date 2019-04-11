@@ -1,6 +1,6 @@
 :slug: do-kester
 :name: Do Kester
-:image: do-kester.jpg
+:image: do_kester.JPG
 
 I have over 40 years of programming experience (fortran, pascal, C,
 java, python) in the area of space based astronomy at SRON (Space
