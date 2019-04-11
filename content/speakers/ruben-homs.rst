@@ -1,5 +1,5 @@
 :slug: ruben-homs
 :name: Ruben Homs
-:image: ruben-homs.jpg
+:image: ruben_homs.jpeg
 
 DevOps engineer at Spindle

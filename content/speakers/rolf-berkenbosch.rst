@@ -1,6 +1,6 @@
 :slug: rolf-berkenbosch
 :name: Rolf Berkenbosch
-:image: rolf-berkenbosch.jpg
+:image: rolf_berkenbosch.jpg
 
 Rolf Berkenbosch, currently working as "specialist infrastructure
 developer” for Duo (Dienst Uitvoering Onderwijs). He is working for

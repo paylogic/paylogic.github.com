@@ -1,6 +1,6 @@
 :slug: teake-nutma
 :name: Teake Nutma
-:image: teake-nutma.jpg
+:image: teake_nutma.jpeg
 
 Teake Nutma is a software engineer at the Kapteyn Astronomical
 Institute in Groningen. He obtained his PhD in theoretical physics at

@@ -1,6 +1,6 @@
 :slug: miroslav-sedivy
 :name: Miroslav Šedivý
-:image: miroslav-sedivy.jpg
+:image: miroslav_sedivy.jpg
 
 Senior Software Developer at solute GmbH. Using Python to get you the
 best prices online. Born in Czechoslovakia, studied in France, living

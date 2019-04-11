@@ -1,6 +1,6 @@
 :slug: marina-papadopoulou
 :name: Marina Papadopoulou
-:image: marina-papadopoulou.jpg
+:image: marina_papadopoulou.jpg
 
 Marina Papadopoulou is a PhD student on Theoretical Biology at the
 University of Groningen, where she studies computational models of

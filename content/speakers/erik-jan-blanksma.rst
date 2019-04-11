@@ -1,6 +1,6 @@
 :slug: erik-jan-blanksma
 :name: Erik-Jan Blanksma
-:image: erik-jan-blanksma.jpg
+:image: erikjan_blanksma.jpg
 
 Erik-Jan has over 20 years of experience in software design and
 development, starting from scratching COBOL an RPG in ancient

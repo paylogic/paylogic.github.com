@@ -1,6 +1,6 @@
 :slug: peter-c-kroon
 :name: Peter C Kroon
-:image: peter-c-kroon.jpg
+:image: peter_kroon.jpg
 
 I'm a PhD student at the university of Groningen working on Molecular
 Dynamics. Most of the time however, I'm busy creating new tools and
