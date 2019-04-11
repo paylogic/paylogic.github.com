@@ -2,4 +2,6 @@
 :name: Reinout van Rees
 :image: reinout_van_rees.jpg
 
-Civil engineer by education, programmer by experience. Maker of summaries: just google for "pygrunn" and "reinout", for instance. Doing lots of python behind-the-scenes automation + working on django projects: all for water management in the Netherlands and abroad.
+Python/django developer + OPS at Nelen&Schuurmans in Utrecht. I've
+done everything from sysadmin stuff to python/django/plone to css. I
+maintain a couple of open source packages like zest.releaser.
