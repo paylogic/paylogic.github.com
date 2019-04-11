@@ -14,7 +14,7 @@ discuss the limitations of the native file system backend and why at
 Paylogic we decided to implement a more advanced backend.
 
 In this journey, we will explore some of the less-used file system
-locking primitives of *nix systems and how we (ab)used them, the
+locking primitives of \*nix systems and how we (ab)used them, the
 difficulty of testing when concurrency is involved and some lessons
 learned during the development. We will also see some python WTFs
 about file objects.
