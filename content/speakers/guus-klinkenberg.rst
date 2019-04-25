@@ -1,6 +1,6 @@
 :slug: guus-klinkenberg
 :name: Guus Klinkenberg
-:image: guus-klinkenberg.jpg
+:image: guus_klinkenberg.jpg
 
 Born and raised in Groningen. While following the Computing Science
 program at the University, Guus got distracted by what life and
