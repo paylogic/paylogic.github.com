@@ -1,6 +1,5 @@
 :slug: andre-duarte-and-auke-oosterhoff
 :name: André Duarte & Auke Oosterhoff
-:image: andre-duarte-and-auke-oosterhoff.jpg
 
 Originated from 2 countries that ruled the seas, Portugal and The
 Netherlands, André and Python now join forces to try to conquer the
