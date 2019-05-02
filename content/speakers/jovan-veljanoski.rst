@@ -1,6 +1,5 @@
 :slug: jovan-veljanoski
 :name: Jovan Veljanoski
-:image: jovan-veljanoski.jpg
 
 Jovan is a senior data scientists & researcher at XebiaLabs, where he
 creates predictive models related to DevOps pipelines. Working mostly

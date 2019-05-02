@@ -1,6 +1,5 @@
 :slug: patrick-vogel-and-bogdan-petre
 :name: Patrick Vogel & Bogdan Petre
-:image: patrick-vogel-and-bogdan-petre.jpg
 
 Second year Master student at the University of Groningen. Together
 with another student and two assistant professors, we started a

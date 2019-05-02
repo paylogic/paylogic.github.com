@@ -14,7 +14,9 @@ bugs. Those bugs are then only discovered when you have to deploy a
 new instance of a service because it failed in the weekend after
 you've had one too many drink. This defeats the whole point of having
 your infrastructure as code. You need it to work always, especially in
-case of an emergency.  In this talk I will explain how I solved this
-issue by introducing Python tests for our SaltStack code and how we
-continuously test this. Note that this technique will work with other
-configuration management systems besides SaltStack.
+case of an emergency.
+
+In this talk I will explain how I solved this issue by introducing
+Python tests for our SaltStack code and how we continuously test
+this. Note that this technique will work with other configuration
+management systems besides SaltStack.

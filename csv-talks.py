@@ -34,6 +34,9 @@ def write_rst(path, meta, body):
 
 
 for talk in talks:
+    if talk['Accept?'] != 'y':
+        continue
+
     speaker = talk['Your name']
     speaker_slug = to_slug(speaker)
     bio = talk['Short bio']
