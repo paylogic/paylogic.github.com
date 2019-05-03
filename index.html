@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="PyGrunn">
+
+    <title>PyGrunn</title>
+
+    <link rel="stylesheet" href="/theme/stylesheets/uikit.min.css" />
+    <link rel="stylesheet" href="/theme/stylesheets/uikit.addons.min.css" />
+    <link rel="stylesheet" href="/theme/stylesheets/jquery.fancybox.css" />
+    <link rel="stylesheet" href="/theme/stylesheets/style.css" />
+
+    <!-- Because of the dynamic PyGrunn year system, this is now here. Got a better idea? Create a pull-request. -->
+    <style>
+        /* Hi-res Logo */
+        @media only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-device-pixel-ratio: 2){
+            .uk-logo{
+                background-image: url('/theme/images/logos/pygrunn_logo_2019@2x.png');
+            }
+        }
+    </style>
+
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+
+</head>
+
+<body>
+
+<div class="headerbar with-shadow">
+    <nav class="uk-navbar with-border">
+        <div class="uk-container uk-container-center">
+            <div class="uk-clearfix">
+                <a class="logo uk-float-left uk-display-block" data-uk-smooth-scroll style="background-image: url('/theme/images/logos/pygrunn_logo_2019.png');"></a>
+                <div class="uk-navbar-flip uk-visible-large">
+                    <ul class="uk-navbar-nav" data-uk-scrollspy-nav="{smoothscroll: {closest: 'li', offset: 81}}">
+                        <li class="uk-hidden"><a href="#fullscreen"></a></li>
+                        <li><a href="#speakers">speakers</a></li>
+                        <li><a href="#location">location</a></li>
+                        <li><a href="#tickets">tickets</a></li>
+                        <li><a href="#schedule">schedule</a></li>
+                        <li><a href="#rfp">rfp</a></li>
+                        <li><a href="#tips">tips</a></li>
+                        <li><a href="#sponsor">sponsor</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#movies">movies</a></li>
+                    </ul>
+                </div>
+                <a class="uk-navbar-toggle uk-navbar-flip uk-hidden-large" data-uk-toggle="{target:'#offcanvasmenu'}"></a>
+                <div id="offcanvasmenu" class="uk-hidden uk-hidden-large">
+                    <div class="uk-offcanvasmenu-bar">
+                        <ul class="uk-navbar-nav" data-uk-scrollspy-nav="{smoothscroll: {closest: 'li', offset: 81}}">
+                            <li class="uk-hidden"><a href="#fullscreen"></a></li>
+                            <li><a href="#speakers">speakers</a></li>
+                            <li><a href="#location">location</a></li>
+                            <li><a href="#tickets">tickets</a></li>
+                            <li><a href="#schedule">schedule</a></li>
+                            <li><a href="#rfp">rfp</a></li>
+                            <li><a href="#tips">tips</a></li>
+                            <li><a href="#sponsor">sponsor</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#movies">movies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div id="fullscreen" class="fullscreen">
+    <img class="fullscreen-logo" src='/theme/images/logos/top_artwork_2019.png'/>
+    <div style="padding-bottom:160px;" class="uk-hidden-small"></div>
+    <div class="sponsor-images">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid uk-grid-small uk-grid-width-1-2 uk-grid-width-medium-1-2 uk-text-center">
+                <div>
+                    <a class="spindle-logo sponsor-img gold-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="https://wearespindle.com" target="_blank">
+                        <span>Spindle</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="paylogic-logo sponsor-img gold-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.paylogic.com" title="Paylogic" target="_blank">
+                        <span>Paylogic</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="hugo-logo sponsor-img gold-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://hugo.events" target="_blank">
+                        <span>Hugo</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="media2b-logo sponsor-img gold-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.media2b.net" title="Media2B - Software" target="_blank">
+                        <span>Media2B</span>
+                    </a>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-small uk-grid-width-1-2 uk-grid-width-medium-1-2 uk-text-center">
+                <div>
+                    <a class="dacom-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.dacom.nl" target="_blank">
+                        <span>Dacom</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="tkp-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.tkppensioen.nl" target="_blank">
+                        <span>TKP</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="targetholding-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.target-holding.nl" target="_blank">
+                        <span>TargetHolding</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="dreamsolution-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.dreamsolution.nl" target="_blank">
+                        <span>Dream Solution</span>
+                    </a>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-small uk-grid-width-1-3 uk-grid-width-medium-1-3 uk-text-center">
+                <div>
+                    <a class="satisfiedshopping-logo sponsor-img bronze-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.satisfiedshopping.com" target="_blank">
+                        <span>SatisfiedShopping</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="groningen-logo sponsor-img bronze-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="https://groningendigitalcity.com/" target="_blank">
+                        <span>Gemeente Groningen</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="discogs-logo sponsor-img bronze-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="https://www.discogs.com" target="_blank">
+                        <span>Discogs</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="tiqets-logo sponsor-img bronze-sponsor uk-display-inline-block uk-vertical-align-middle text-hidden" href="https://www.tiqets.com" target="_blank">
+                        <span>Tiqets</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+<div id="feature" class="block-large bg-dark">
+    <div class="uk-container uk-container-center">
+        <section class="feature uk-text-center text-contrast uk-text-large">
+            <p>PyGrunn is the "Python and friends" developer conference<br />with a local footprint and global mindset. Firmly rooted<br />in the open source culture, it aims to provide the<br />leaders in advanced internet technologies a<br />platform to inform, inspire and impress their peers.</p>
+            <p class="uk-margin-large-top">For all the latest info join our community on:</p>
+            <div class="social">
+                <a class="uk-icon-twitter-square uk-vertical-align-middle uk-icon-small" href="https://twitter.com/PyGrunn" title="Follow us on Twitter" target="_blank"></a>
+                <a class="uk-vertical-align-middle uk-icon-small"  href="https://meetup.com/PyGrunn" title="Join us on Meetup" target="_blank">
+                    <img src="https://meetup.github.io/swarm-design-system/assets/contentImages/brandAssets/swarmLogo_knockout_black.svg" style="filter: invert(85%);width: 85px;">
+                </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="speakers" class="block with-border">
+    <div class="uk-container uk-container-center">
+        <section class="speakers">
+            <div class="uk-text-center"><i class="uk-icon-users uk-icon-large uk-icon-heading"></i></div>
+            <h1 class="uk-text-center uk-heading-large">Speakers 2019</h1>
+            <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-4 uk-margin-large-top uk-text-center" data-uk-grid-margin data-uk-grid-match>
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/oscar_vilaplana.jpg');"></div>
+                    <h2>Òscar Vilaplana</h2>
+                    <p class="uk-text-bold">Advanced Pytest</p>
+                    <a data-uk-modal="{target:'#bio-oscar-vilaplana'}">More information</a>
+                    <div id="bio-oscar-vilaplana" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/oscar_vilaplana.jpg" alt="Òscar Vilaplana" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Òscar Vilaplana</span>
+                            <p class="uk-text-bold">Advanced Pytest </p>
+
+                            <p>Unit tests. At days you can't live without them, at days you can't
+live with them. Often considered write once, read never, panic
+later. And yet unit tests can break every build, stop every deploy,
+ruin every productive day.</p>
+<p>I'll share the techniques we use at Tiqets to keep our tests simple,
+maintainable, and powerful using Pytest.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>I help tech teams. I work as lead developer for internal tooling at
+Tiqets. I write short fiction and sometimes make music.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/niek_hoekstra_and_jean-paul_van_oosten.jpg');"></div>
+                    <h2>Niek Hoekstra and Jean-Paul van Oosten</h2>
+                    <p class="uk-text-bold">Lessons from using GraphQL in production</p>
+                    <a data-uk-modal="{target:'#bio-niek-hoekstra-and-jean-paul-van-oosten'}">More information</a>
+                    <div id="bio-niek-hoekstra-and-jean-paul-van-oosten" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/niek_hoekstra_and_jean-paul_van_oosten.jpg" alt="Niek Hoekstra and Jean-Paul van Oosten" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Niek Hoekstra and Jean-Paul van Oosten</span>
+                            <p class="uk-text-bold">Lessons from using GraphQL in production </p>
+
+                            <p>In 2017, GraphQL was introduced to the PyGrunn community, we will
+expand on that presentation with some lessons from using GraphQL in
+production. We will touch some more advanced GraphQL features: Using
+Fragments, how to combine this with uploading files, authentication,
+and more. We will also have a quick demonstration and recap of GraphQL
+and the pros and cons.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Niek is a backend software engineer at Target Holding, Jean-Paul a
+machine learning engineer with experience in both frontend and
+backend. At Target Holding we build end-to-end AI applications.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/rik_huijzer.jpg');"></div>
+                    <h2>Rik Huijzer</h2>
+                    <p class="uk-text-bold">Deep learning and natural language processing</p>
+                    <a data-uk-modal="{target:'#bio-rik-huijzer'}">More information</a>
+                    <div id="bio-rik-huijzer" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/rik_huijzer.jpg" alt="Rik Huijzer" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Rik Huijzer</span>
+                            <p class="uk-text-bold">Deep learning and natural language processing </p>
+
+                            <p>Like many fields in computer science, natural language processing
+(NLP) has changed due to the ever increasing accuracy of deep learning
+systems. During my graduation at Spindle I have focused my thesis on
+NLP. In this talk I will show how grammar from a language used to be
+captured, and how it is done by current approaches. The goal is to
+provide attendees with some intuition about what is currently possible
+and what is not.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Graduated computer science at Spindle</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/teake_nutma.jpeg');"></div>
+                    <h2>Teake Nutma</h2>
+                    <p class="uk-text-bold">Managing environments and deploying code with conda</p>
+                    <a data-uk-modal="{target:'#bio-teake-nutma'}">More information</a>
+                    <div id="bio-teake-nutma" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/teake_nutma.jpeg" alt="Teake Nutma" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Teake Nutma</span>
+                            <p class="uk-text-bold">Managing environments and deploying code with conda </p>
+
+                            <p>Anaconda is a popular data science driven Python distribution. Its
+package manager, conda, can however be used for much more than just
+installing Anaconda. It can for example manage independent
+environments for different Python versions, or even C libraries. And
+its tooling makes it fairly easy to build and distribute
+cross-platform packages. In fact, we recently migrated from a
+homegrown solution to conda for the deployment of our astronomical
+data reduction software.</p>
+<p>In this talk I'll survey the current state of Python package managers,
+explain why we chose conda, and describe our development and deploy
+workflow with conda. I'll also highlight some of its lesser known nice
+features and pain points.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Teake Nutma is a software engineer at the Kapteyn Astronomical
+Institute in Groningen. He obtained his PhD in theoretical physics at
+the University of Groningen and was a post-doctoral researcher at the
+Max-Planck Institute for Gravitational Physics in Potsdam. After a
+brief stint in industry, he joined the ESA Euclid mission in 2016 and
+has since been working enthusiastically at the intersection of
+fundamental science, big data, and IT architecture.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/peter_kroon.jpg');"></div>
+                    <h2>Peter C Kroon</h2>
+                    <p class="uk-text-bold">Python as a scientist's playground</p>
+                    <a data-uk-modal="{target:'#bio-peter-c-kroon'}">More information</a>
+                    <div id="bio-peter-c-kroon" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/peter_kroon.jpg" alt="Peter C Kroon" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Peter C Kroon</span>
+                            <p class="uk-text-bold">Python as a scientist's playground </p>
+
+                            <p>Python is the perfect tool for scientific programming since there are
+SO MANY different modules with pre-packaged solutions available on
+PyPI and conda-forge. However, there are SO MANY different modules
+available, with many either providing the exact same solutions with a
+different coating, or at least having overlapping functionality. This
+can make it difficult to choose one package over another.</p>
+<p>In my talk I will discuss some specific features I take into
+consideration as a scientist when choosing one package over
+another. As an example I will look at some packages providing
+implementations for graphs, and why I chose one over the others. I
+hope that from my talk you can learn what you can do to make your
+package as useful as possible to me and help me choose your package.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>I'm a PhD student at the university of Groningen working on Molecular
+Dynamics. Most of the time however, I'm busy creating new tools and
+research possibilities using Python rather than doing what I was hired
+to do. Science presents its own unique set of programming challenges,
+some of which I encounter every day. I hope to highlight a few of
+those in my talk.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/gerard_lutterop.jpg');"></div>
+                    <h2>Gerard Lutterop</h2>
+                    <p class="uk-text-bold">Provide a scalable and secure REST based backend with Python</p>
+                    <a data-uk-modal="{target:'#bio-gerard-lutterop'}">More information</a>
+                    <div id="bio-gerard-lutterop" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/gerard_lutterop.jpg" alt="Gerard Lutterop" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Gerard Lutterop</span>
+                            <p class="uk-text-bold">Provide a scalable and secure REST based backend with Python </p>
+
+                            <p>REST based backends are a boon for front end developers, since
+connecting the front end to the business logic and data layer is very
+straightforward using standard internet technologies.</p>
+<p>Providing a REST backend turns out to be very difficult, when you want
+to adhere to the 'real' REST standards.</p>
+<p>We used Python to develop a framework which is agnostic to the web
+framework and to the database. The interface can be specified
+declaratively using a standard language, to which our framework is
+also agnostic. All non-standard logic is implemented using Python on
+pre-defined events.</p>
+<p>This framework turns out to be extremely productive, not only for the
+programmer, but especially for the designer of the
+interface. Implementing a battleproof REST based interface is
+literally one click away.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>A veteran in Python, almost 20 years of exclusive Python usage in my
+projects. Done all kinds of projects: data analysis, migrations,
+software robots, cloud based services etc. Currently focusing on
+Sitekick, a service to assist web site owners in managing their web
+site.</p>
+<p>Sitekick is built on the Okapi platform, a modular platform to enable
+easy development of REST based interfaces.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/guus_klinkenberg.jpg');"></div>
+                    <h2>Guus Klinkenberg</h2>
+                    <p class="uk-text-bold">What was its type?</p>
+                    <a data-uk-modal="{target:'#bio-guus-klinkenberg'}">More information</a>
+                    <div id="bio-guus-klinkenberg" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/guus_klinkenberg.jpg" alt="Guus Klinkenberg" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Guus Klinkenberg</span>
+                            <p class="uk-text-bold">What was its type? </p>
+
+                            <p>Coming from Java and a bit of C, the switch to python was not always
+easy. This was partly because python is a dynamically typed
+language. With the introduction of type hinting it is possible for
+developers to provide types for variables. This can help reduce the
+amount of scope one needs to cope with, while also helping IDEs and
+other code analysis tools to help you write code. However, in most of
+the (open source) python code type hinting is not present. This talk
+will be a short introduction in type hinting, to show its advantages
+and hopefully make you consider using it sometime.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Born and raised in Groningen. While following the Computing Science
+program at the University, Guus got distracted by what life and
+programming has to offer.</p>
+<p>That is why he is still finishing up his master in data science and
+systems complexity. This culminated in organising the largest student
+conference about IT in the Netherlands on disruptive
+technology. Furthermore, he is participating in Ticketguard, a startup
+where they offer dynamic, non-resellable access identifier for events,
+enterprises and public transport.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/ruben_homs.jpeg');"></div>
+                    <h2>Ruben Homs</h2>
+                    <p class="uk-text-bold">Testing your infrastructure code</p>
+                    <a data-uk-modal="{target:'#bio-ruben-homs'}">More information</a>
+                    <div id="bio-ruben-homs" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/ruben_homs.jpeg" alt="Ruben Homs" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Ruben Homs</span>
+                            <p class="uk-text-bold">Testing your infrastructure code </p>
+
+                            <p>Writing code to setup parts of your infrastructure isn't
+new. Configuration management has been a part of most infrastructure
+teams toolkits for a while now. However, unfortunately writing your
+infrastructure code once and forgetting about it is the norm rather
+than the exception. And, surprise surprise, things eventually break!
+Repositories stop serving packages, GPG signatures change, and subtle
+details to the way you implement your infrastructure code can cause
+bugs. Those bugs are then only discovered when you have to deploy a
+new instance of a service because it failed in the weekend after
+you've had one too many drink. This defeats the whole point of having
+your infrastructure as code. You need it to work always, especially in
+case of an emergency.</p>
+<p>In this talk I will explain how I solved this issue by introducing
+Python tests for our SaltStack code and how we continuously test
+this. Note that this technique will work with other configuration
+management systems besides SaltStack.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>DevOps engineer at Spindle</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/reinout_van_rees.jpg');"></div>
+                    <h2>Reinout van Rees</h2>
+                    <p class="uk-text-bold">Cookiecutter: handy (self-made) templates for starting your projects</p>
+                    <a data-uk-modal="{target:'#bio-reinout-van-rees'}">More information</a>
+                    <div id="bio-reinout-van-rees" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/reinout_van_rees.jpg" alt="Reinout van Rees" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Reinout van Rees</span>
+                            <p class="uk-text-bold">Cookiecutter: handy (self-made) templates for starting your projects </p>
+
+                            <p>Cookiecutter (<a class="reference external" href="https://cookiecutter.readthedocs.io">https://cookiecutter.readthedocs.io</a>) is a handy program
+to start your project with. You give it a template and it creates the
+basic structure for your project. There are all sorts of templates
+online, but you can also create your own. Especially useful inside a
+company, to ensure projects look more or less the same and to help
+colleagues get started right away with documentation, testing,
+packaging, automation, etc.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Python/django developer + OPS at Nelen&amp;Schuurmans in Utrecht. I've
+done everything from sysadmin stuff to python/django/plone to css. I
+maintain a couple of open source packages like zest.releaser.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/erikjan_blanksma.jpg');"></div>
+                    <h2>Erik-Jan Blanksma</h2>
+                    <p class="uk-text-bold">Data processing and visualisation of tractor data</p>
+                    <a data-uk-modal="{target:'#bio-erik-jan-blanksma'}">More information</a>
+                    <div id="bio-erik-jan-blanksma" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/erikjan_blanksma.jpg" alt="Erik-Jan Blanksma" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Erik-Jan Blanksma</span>
+                            <p class="uk-text-bold">Data processing and visualisation of tractor data </p>
+
+                            <p>Tractors are capable of logging a huge amount of data while
+working. Things like position, fuel usage and yield are recorded
+continuously. This data can be an invaluable source of information for
+farmers about their crop fields. We'll discuss how we leverage tools
+like postgis, numpy. pandas and matplotlib to process this data and
+create different types of visualisations and provide usable feedback
+to farmers to help them make decisions for more efficient and
+effective farming.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Erik-Jan has over 20 years of experience in software design and
+development, starting from scratching COBOL an RPG in ancient
+mainframe systems to Java and full stack web development. He has been
+working for Dacom for the past 4 years, using Python to create an
+online platform for farmers. He 's been living in or around Groningen
+for most of his life. He is married and has 2 sons, who are now taller
+but still somehow weigh less than him.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/berco_beute.jpg');"></div>
+                    <h2>Berco Beute</h2>
+                    <p class="uk-text-bold">Python and AI</p>
+                    <a data-uk-modal="{target:'#bio-berco-beute'}">More information</a>
+                    <div id="bio-berco-beute" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/berco_beute.jpg" alt="Berco Beute" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Berco Beute</span>
+                            <p class="uk-text-bold">Python's second youth</p>
+
+                            <p>How Python lives its second youth due to its popularity in the AI arena.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Digital polymath. Curious, creative, skilled, enterprising &amp; ambitious. Loves to mix AI, music, 3D &amp; software. Founding father of PyGrunn. Bewonders the mirrorworld!</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/martin_roelfs.jpg');"></div>
+                    <h2>Martin Roelfs</h2>
+                    <p class="uk-text-bold">Symbolic Fitting using symfit</p>
+                    <a data-uk-modal="{target:'#bio-martin-roelfs'}">More information</a>
+                    <div id="bio-martin-roelfs" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/martin_roelfs.jpg" alt="Martin Roelfs" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Martin Roelfs</span>
+                            <p class="uk-text-bold">Symbolic Fitting using symfit </p>
+
+                            <p>Data fitting problems are very common in disciplines as varied as
+economics, physics, and psychology, just to name a few. Although very
+powerful tools for this purpose already exist in the python ecosystem,
+I found during my own research as a theoretical physicist that I was
+missing a tool which stays close to mathematics as I would write it on
+paper, but which could then be used to fit experimental data.</p>
+<p>SymPy offers the kind of computer algebra system which is becoming
+ever more indispensable in modern research, but it speaks a completely
+different language from commonly used fitting tools such as
+scipy.minimize. To address this problem I developed symfit, a unifying
+wrapper around both of these libraries. Using symfit, models can be
+expressed symbolically and fitted numerically, with very little effort
+required from the user.</p>
+<p>During this talk I will outline some of the data fitting challenges
+that were overcome using symfit, focusing on the coding
+aspect. Examples include fitting to ordinary differential equation
+(ODE) based models, Tikhonov/Ridge regression, global fitting to
+multiple data sets with shared parameters, global minimization using
+Differential Evolution, and many more.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Physicist by day, python enthusiast by night.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/artur_barseghyan.jpeg');"></div>
+                    <h2>Artur Barseghyan</h2>
+                    <p class="uk-text-bold">Find your art twin in the collection of the Rijksmuseum</p>
+                    <a data-uk-modal="{target:'#bio-artur-barseghyan'}">More information</a>
+                    <div id="bio-artur-barseghyan" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/artur_barseghyan.jpeg" alt="Artur Barseghyan" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Artur Barseghyan</span>
+                            <p class="uk-text-bold">Find your art twin in the collection of the Rijksmuseum </p>
+
+                            <p>Dive into facial recognition. Brief overview of available
+solutions. Implementation insights of demq.ai with overview of the
+client- and server- tooling (Raspberry PI, Docker, etc). Interact with
+audience (demo). Lessons learned and what's next to come.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Senior developer, open source contributor</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/miroslav_sedivy.jpg');"></div>
+                    <h2>Miroslav Šedivý</h2>
+                    <p class="uk-text-bold">A Day Has Only 24±1 Hours</p>
+                    <a data-uk-modal="{target:'#bio-miroslav-sedivy'}">More information</a>
+                    <div id="bio-miroslav-sedivy" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/miroslav_sedivy.jpg" alt="Miroslav Šedivý" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Miroslav Šedivý</span>
+                            <p class="uk-text-bold">A Day Has Only 24±1 Hours </p>
+
+                            <p>On the last Sunday of October you may get “one more hour of sleep” but
+also may spend much more time debugging code dealing with the
+timezones, daylight saving time shifts and datetime stuff in general.</p>
+<p>Invention of the geographers in the 19th century, time zones became a
+true victim of short-sighted political decisions during the 20th and
+21st centuries. And it is still our duty to keep track of this whole
+fiddling with our clocks.</p>
+<p>We'll look at a few pitfalls you may encounter when working with
+datetimes in Python. We'll discover the pytz module and explain why
+pytz.all_timezones contains over 500 individual timezones, with a
+slight focus on the Netherlands and surrounding countries. We'll also
+find the reason why pytz is not part of the standard Python, why it
+gets updated so often and why even that won't solve all your problems.</p>
+<p>Two centuries of propaganda and chaos in thirty minutes. Maybe that
+will make you want to avoid time zones in your code altogether!</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Senior Software Developer at solute GmbH. Using Python to get you the
+best prices online. Born in Czechoslovakia, studied in France, living
+in Germany. Addicted to foreign languages and the “human” face of
+computing, such as writing systems, calendar and time zones, and
+teaching computers to work on the boring tasks. Twitter: &#64;eumiro</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/thomas_derksen.jpg');"></div>
+                    <h2>Thomas Derksen</h2>
+                    <p class="uk-text-bold">The applications and implementation of Generative Adversarial Networks</p>
+                    <a data-uk-modal="{target:'#bio-thomas-derksen'}">More information</a>
+                    <div id="bio-thomas-derksen" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/thomas_derksen.jpg" alt="Thomas Derksen" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Thomas Derksen</span>
+                            <p class="uk-text-bold">The applications and implementation of Generative Adversarial Networks </p>
+
+                            <p>Generative Adversarial Networks (GANs) are systems of two competing
+artificial neural networks that can generate realistic artificial data
+in a given domain. Since their introduction in 2014, they have mostly
+been used to generate realistic looking images, but they can also be
+applied in other domains like music, or fraud detection. In this talk,
+I will focus on the inner workings of GANs, their different
+applications, and how they can be implemented in Python.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>I'm a backend developer and AI consultant working for Goldmund,
+Wyldebeast and Wunderliebe in Amsterdam, with a Master's Degree in
+Artificial Intelligence.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/unknown.jpg');"></div>
+                    <h2>Patrick Vogel &amp; Bogdan Petre</h2>
+                    <p class="uk-text-bold">Automatic Monitoring and Profiling Flask-Based Services: The Easy Way</p>
+                    <a data-uk-modal="{target:'#bio-patrick-vogel-and-bogdan-petre'}">More information</a>
+                    <div id="bio-patrick-vogel-and-bogdan-petre" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/unknown.jpg" alt="Patrick Vogel &amp; Bogdan Petre" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Patrick Vogel & Bogdan Petre</span>
+                            <p class="uk-text-bold">Automatic Monitoring and Profiling Flask-Based Services: The Easy Way </p>
+
+                            <p>Web-services are becoming more and more used nowadays and many are
+implemented using Flask, one of the main web-development frameworks
+for Python. Most existing performance monitoring platforms are
+heavyweight to configure and treat the subject code as a black box. We
+present the Flask Monitoring Dashboard
+(<a class="reference external" href="https://github.com/flask-dashboard">https://github.com/flask-dashboard</a>), our open-source solution for
+monitoring and profiling Flask-based web-services. It is trivial to
+install and configure while providing a rich set of features.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Second year Master student at the University of Groningen. Together
+with another student and two assistant professors, we started a
+project in which we monitor the performance of evolving
+Flask-applications. This project has gained popularity on Github with
+over 80 stars and over 30.000 downloads on PyPi. See the project at:
+<a class="reference external" href="https://github.com/flask-dashboard/Flask-MonitoringDashboard">https://github.com/flask-dashboard/Flask-MonitoringDashboard</a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/unknown.jpg');"></div>
+                    <h2>Jovan Veljanoski</h2>
+                    <p class="uk-text-bold">Vaex: 1 Billion rows, 1 laptop, serious data science</p>
+                    <a data-uk-modal="{target:'#bio-jovan-veljanoski'}">More information</a>
+                    <div id="bio-jovan-veljanoski" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/unknown.jpg" alt="Jovan Veljanoski" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Jovan Veljanoski</span>
+                            <p class="uk-text-bold">Vaex: 1 Billion rows, 1 laptop, serious data science </p>
+
+                            <p>Working with datasets comprising millions or billions or samples is
+becoming an increasingly common task, one that is typically tackled
+with distributed computing. We will demonstrate how one can attack
+such a problem using just a laptop while bringing extra value by
+saving time, costs and manpower.</p>
+<p>In this talk, we will analyse the entire public database of the New
+York City Yellow Cab taxi service, containing the data for well over a
+billion trips. Our live demonstration will showcase how to find which
+locations are most lucrative for taxi drivers given a certain time of
+day, how to identify interesting objects or events in the data, as
+well as build a machine learning model to predict the expected tip
+amount for a given trip. We will do the entire exploration and
+analysis in Python using a single laptop, live!</p>
+<p>All this is possible with Vaex, a DataFrame library with an expected
+API. It leverages simple but efficient out-of-core algorithms for data
+visualisation, filtering, cleaning, preprocessing and transformation
+which are lazily evaluated, together with efficient storage (memory
+mapped arrow or hdf5). This makes Vaex an ideal tool for working with
+datasets that would otherwise be too large to fit into the memory of a
+single computer.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Jovan is a senior data scientists &amp; researcher at XebiaLabs, where he
+creates predictive models related to DevOps pipelines. Working mostly
+with Python in the Jupyter ecosystem, he has considerable experience
+in clustering analysis and predictive modeling. Jovan has a PhD in
+Astrophysics, is a co-founder of vaex.io, and is interested in novel
+machine learning technologies and applications.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/cristian_marocico.jpg');"></div>
+                    <h2>Cristian Marocico</h2>
+                    <p class="uk-text-bold">Computer vision with Python</p>
+                    <a data-uk-modal="{target:'#bio-cristian-marocico'}">More information</a>
+                    <div id="bio-cristian-marocico" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/cristian_marocico.jpg" alt="Cristian Marocico" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Cristian Marocico</span>
+                            <p class="uk-text-bold">Computer vision with Python </p>
+
+                            <p>In this presentation I will show you how you can use Python for
+computer vision. This will be done with different examples. First I
+will start with a short introduction into computer vision. After that
+I will show a short example of transfer learning where I let a
+computer recognize the difference between a Sedan and and a SUV. Next,
+I will talk about one of the projects the data science team at the
+university of Groningen is working on. In this project we have to
+recognize budding yeast cells from microscopic images. This is the
+reproduction of yeast cells. I will show some code for this
+project. Finally, I will talk about a project we work on together with
+nuclear physics. The goal of this project is to process a lot of data
+and filter the data. Through computer vision the right data should be
+recognized. All scripts will be in Python.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>I work as a data scientist at the University of Groningen. We support
+researchers to gain and analyse all sorts of data. We use a
+combination of skills applied to the fields of statistics, artificial
+intelligence, computer science and more.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/rolf_berkenbosch.jpg');"></div>
+                    <h2>Rolf Berkenbosch</h2>
+                    <p class="uk-text-bold">home automation with python and how to contribute to the community</p>
+                    <a data-uk-modal="{target:'#bio-rolf-berkenbosch'}">More information</a>
+                    <div id="bio-rolf-berkenbosch" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/rolf_berkenbosch.jpg" alt="Rolf Berkenbosch" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Rolf Berkenbosch</span>
+                            <p class="uk-text-bold">home automation with python and how to contribute to the community </p>
+
+                            <p>Have you ever contribute to a community? Are you ready for the next
+step in home automation or afraid of using home automation? Get
+informed how home-assistant can make you live easier and how you can
+contribute to a community. In the first part of this talk I’m going to
+talk about what home-assistant is, how you can run it quickly and
+start hooking up things. In the second part of my talk I will talk
+about how you can contribute to the communities.</p>
+<p>Home-Assistant is completely written in Python3 and have a large
+growing community. Thanks by the architecture is it very easy to add
+custom components, that's why there are more than 1310 build in
+components. You can hook up your ikea tradfri lights, your toon or
+nest thermostat to you home-automation.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Rolf Berkenbosch, currently working as &quot;specialist infrastructure
+developer” for Duo (Dienst Uitvoering Onderwijs). He is working for
+more than 20 years in IT, had several companies, like to automate his
+whole house, and likes new technologies.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/daniel_de_kok.jpg');"></div>
+                    <h2>Daniël de Kok</h2>
+                    <p class="uk-text-bold">finalfusion: rustic word embeddings for Python</p>
+                    <a data-uk-modal="{target:'#bio-daniel-de-kok'}">More information</a>
+                    <div id="bio-daniel-de-kok" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/daniel_de_kok.jpg" alt="Daniël de Kok" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Daniël de Kok</span>
+                            <p class="uk-text-bold">finalfusion: rustic word embeddings for Python </p>
+
+                            <p>Word embeddings have drastically changed natural language processing throughout
+the last five years. Word embeddings represent words as vectors rather than
+as discrete units, allowing machine learning techniques to exploit similarities
+between words.</p>
+<p>In the first half of this talk, I will introduce the finalfusion Python module.
+finalfusion supports word representations with subword units to account for
+words that were not seen in the training data. finalfusion's API allows you to
+do similarity and anology queries, as well as computing word embeddings for
+downstream use in neural networks.</p>
+<p>The finalfusion Python module is a thin, type-safe wrapper around the rust2vec
+Rust library. In the second half of this talk, I will dive deeper into the
+implementation of the module as a real-world example of implementing Python
+modules in Rust.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>I am a researcher at the University of Tübingen. My interest lies the analysis
+of natural language using deep learning methods such as convolutional and
+recurrent neural network. I am particularly interested in part-of-speech tagging,
+topological field analysis, dependency parsing, and phrasal composition. I
+primarily use Rust and Tensorflow, with some Python for gluing.</p>
+<p>My open source projects can be found at: <a class="reference external" href="https://github.com/danieldk">https://github.com/danieldk</a> and
+<a class="reference external" href="https://git.sr.ht/danieldk">https://git.sr.ht/danieldk</a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/marina_papadopoulou.jpg');"></div>
+                    <h2>Marina Papadopoulou</h2>
+                    <p class="uk-text-bold">Disentangling scientific fields with topic analysis in Python</p>
+                    <a data-uk-modal="{target:'#bio-marina-papadopoulou'}">More information</a>
+                    <div id="bio-marina-papadopoulou" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/marina_papadopoulou.jpg" alt="Marina Papadopoulou" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Marina Papadopoulou</span>
+                            <p class="uk-text-bold">Disentangling scientific fields with topic analysis in Python </p>
+
+                            <p>‘Science of science’ is an emerging transdisciplinary field of
+research, which uses new computational tools and big data, to provide
+insight in the characteristics and dynamics underlying scientific
+research itself. Under its umbrella fall studies of cultural
+evolution, when a large amount of text data gathered through years of
+cultural changes in human societies are being analyzed with an
+artificial intelligence’s toolset. By ‘reading’ through a vast amount
+of data impossible to be analyzed by a human mind, these
+methodological frameworks create ground for gaining quantitative
+insights on questions that were only theoretically and philosophically
+discussed in the past. In this talk, I‘ll showcase an analysis on the
+scientific bibliography of the research fields of ecology and
+evolutionary biology. I'll go through the methodology of topic
+analysis in Python, using packages for natural language processing,
+latent dirichlet allocation models, dimensionality reduction and
+clustering techniques. By taking advantage of the computational
+advances of text mining, this is just an example from the vast pool of
+possibilities that machine learning can offer in the effort of better
+understanding the world around us.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Marina Papadopoulou is a PhD student on Theoretical Biology at the
+University of Groningen, where she studies computational models of
+self-organization and complex collective behaviors of social
+systems. She holds a Bachelor degree of Biology from the Aristotle
+University of Thessaloniki and a Master of Science on Computational
+Methods in Ecology and Evolution from Imperial College
+London. Throughout her studies, she focused on the application of
+computational tools on natural sciences research, from spatial
+modelling of wild animal populations, to cultural evolution and birds’
+collective escape. Marina is also involved in various side projects,
+such as a documentary about sustainable agriculture and the
+organization of the Groningen PhD Day 2019, and supports efforts of
+promoting women in science and engineering. She mostly speaks in Greek
+and English, and writes in C++, Python and R.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/daniel_de_kok.jpg');"></div>
+                    <h2>Daniël de Kok</h2>
+                    <p class="uk-text-bold">Tensorflow in Rust with a little help from Python</p>
+                    <a data-uk-modal="{target:'#bio-daniel-de-kok'}">More information</a>
+                    <div id="bio-daniel-de-kok" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/daniel_de_kok.jpg" alt="Daniël de Kok" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Daniël de Kok</span>
+                            <p class="uk-text-bold">Tensorflow in Rust with a little help from Python </p>
+
+                            <p>Tensorflow is a widely-used library for defining and running
+computation graphs, such as machine learning models. Rust is a safe,
+strongly-typed, compiled language with zero-cost abstractions. Rust
+and Tensorflow seem like a natural match for performance-critical
+machine learning applications. However, the Tensorflow Python module
+provides the richest API to construct graphs, whereas Rust has to rely
+on the very limited Tensorflow C API. In this talk, I will show how
+you can train and run Tensorflow graphs directly from Rust, with a
+little help from Python. We will use the rich Python Tensorflow API to
+define a computation graph with the necessary ops. We will then use
+this graph directly from Rust to train the model parameters and do
+predictions after training. The result is a Rust program that only has
+a dependency on the Tensorflow shared library. I will conclude the
+presentation with a real-world example of a Rust sequence tagger,
+sticker, that was used to annotate a 27.3 billion token web corpus.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>I am a researcher at the University of Tübingen. My interest lies the analysis
+of natural language using deep learning methods such as convolutional and
+recurrent neural network. I am particularly interested in part-of-speech tagging,
+topological field analysis, dependency parsing, and phrasal composition. I
+primarily use Rust and Tensorflow, with some Python for gluing.</p>
+<p>My open source projects can be found at: <a class="reference external" href="https://github.com/danieldk">https://github.com/danieldk</a> and
+<a class="reference external" href="https://git.sr.ht/danieldk">https://git.sr.ht/danieldk</a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/mark_boer.jpg');"></div>
+                    <h2>Mark Boer</h2>
+                    <p class="uk-text-bold">Embedding the Python interpreter</p>
+                    <a data-uk-modal="{target:'#bio-mark-boer'}">More information</a>
+                    <div id="bio-mark-boer" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/mark_boer.jpg" alt="Mark Boer" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Mark Boer</span>
+                            <p class="uk-text-bold">Embedding the Python interpreter </p>
+
+                            <p>More and more applications are adding Python support to offer the user
+a scripting language to interact with. Even Microsoft is considering
+to officially add Python to Excel. In this talk we will explore how
+one would go about doing this.</p>
+<p>We dive into the CPtyhon internals and build our own simple REPL using
+Python's C-API. I'll show you some of the quirks and pitfalls I ran
+into, how you can wrestle the GIL and how to manage global state.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Coming from a background in the hard sciences I found Python
+relatively late in my career. After working as a C++ dev for a couple
+of years, Python now offers me all the tools I need as a data
+scientist / engineer.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/unknown.jpg');"></div>
+                    <h2>André Duarte &amp; Auke Oosterhoff</h2>
+                    <p class="uk-text-bold">How you can use Python to charge your electric vehicle.</p>
+                    <a data-uk-modal="{target:'#bio-andre-duarte-and-auke-oosterhoff'}">More information</a>
+                    <div id="bio-andre-duarte-and-auke-oosterhoff" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/unknown.jpg" alt="André Duarte &amp; Auke Oosterhoff" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">André Duarte & Auke Oosterhoff</span>
+                            <p class="uk-text-bold">How you can use Python to charge your electric vehicle. </p>
+
+                            <p>We are at the start of a new era of mobility: the combustion engine is
+being replaced by batteries. The load of Electrical Vehicles (EV) in
+the electrical grid introduces new challenges.</p>
+<p>André and Auke will demonstrate how their company, The Mobility House,
+uses Python 3.7 in smart charging applications. Their company uses
+their open source implentation of the protocol OCPP to control
+chargers while charging EVs.</p>
+<p>They'll also show how you can control your charger using OCPP with
+open source Python solutions.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Originated from 2 countries that ruled the seas, Portugal and The
+Netherlands, André and Python now join forces to try to conquer the
+world once more...but, using Python, this time.</p>
+<p>André is an Electrical and Computers Engineer from Portugal, where he
+started acquiring experience in the electro-mobility area, working for
+Siemens, but finally realized that Startups are cooler and decided to
+embrace a new challenge at TMH.</p>
+<p>Auke is an Dutch hobby hacker and electronics enthusiast with a decade
+of programming experience. He's is author of several open source
+projects and recently moved to Munich to work in the field of electric
+mobility.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/do_kester.JPG');"></div>
+                    <h2>Do Kester</h2>
+                    <p class="uk-text-bold">BayesicFitting. A Toolbox for Bayesian Model Fitting.</p>
+                    <a data-uk-modal="{target:'#bio-do-kester'}">More information</a>
+                    <div id="bio-do-kester" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/do_kester.JPG" alt="Do Kester" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Do Kester</span>
+                            <p class="uk-text-bold">BayesicFitting. A Toolbox for Bayesian Model Fitting. </p>
+
+                            <p>BayesicFitting is a collection of more than 100 python classes that
+can be used to fit models to data. There are over 50 basic model
+classes that can be combined in several ways to construct compound
+models. And over 10 fitters that find least-squares or maximum
+likelihoods. All fitters can calculate the evidence to discriminate
+between models. The remainder are error distributions, priors and
+engines to run NestedSampler, the Bayesian way to solve problems.</p>
+<p>The talk will be about the design of the package, the relations
+between the classes with plenty of examples how to use it.</p>
+<p>BayesicFitting is available on GitHub and Pypi.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>I have over 40 years of programming experience (fortran, pascal, C,
+java, python) in the area of space based astronomy at SRON (Space
+Research of the Netherlands). Mostly I was involved in the calibration
+of instruments on board of satellites. Modelling is an integral part
+of it.</p>
+<p>From 2000 I developed a fitting package in JAVA for the Herschel
+satellite of ESA. All my past fitting experiences and needs I have
+tried to address in it. After my retirement in 2014 I have rewritten
+this package into python. It became BayesicFitting.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="with-shadow uk-border-circle speakers-image" style="background-image:
+                        url('/images/speakers/alessio_bogon.jpg');"></div>
+                    <h2>Alessio Bogon</h2>
+                    <p class="uk-text-bold">File system caching: a backend implementation for dogpile.cache</p>
+                    <a data-uk-modal="{target:'#bio-alessio-bogon'}">More information</a>
+                    <div id="bio-alessio-bogon" class="uk-modal">
+                        <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
+
+                            <img class="with-shadow" width="80" src="/images/speakers/alessio_bogon.jpg" alt="Alessio Bogon" />
+                            <span class="uk-text-middle uk-text-bold uk-margin-left">Alessio Bogon</span>
+                            <p class="uk-text-bold">File system caching: a backend implementation for dogpile.cache </p>
+
+                            <p>Dogpile.cache is a library that provides caching primitives and it
+natively supports backends like Memcached, Redis, and a simple file
+system implementation. In Paylogic, we needed a more advanced file
+system implementation, and eventually, we wrote our own file system
+backend.</p>
+<p>In this talk, I will briefly introduce the dogpile.cache architecture,
+discuss the limitations of the native file system backend and why at
+Paylogic we decided to implement a more advanced backend.</p>
+<p>In this journey, we will explore some of the less-used file system
+locking primitives of *nix systems and how we (ab)used them, the
+difficulty of testing when concurrency is involved and some lessons
+learned during the development. We will also see some python WTFs
+about file objects.</p>
+
+
+                            <p class="uk-text-bold">BIO information</p>
+                                <p>Passionate Python software engineer working at Paylogic.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+<div id="location" class="block text-contrast bg-dark">
+    <div class="uk-container uk-container-center">
+        <section class="location">
+            <div class="uk-text-center"><i class="uk-icon-location-arrow uk-icon-large uk-icon-heading uk-icon-heading-dark"></i></div>
+            <h1 class="uk-text-center uk-heading-large">Location</h1>
+            <div class="uk-grid uk-grid-width-small-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-2 uk-margin-large-top">
+                <div class="uk-text-justify">
+                    <p>PyGrunn  will take place on May 10th at <a target="_blank" href="http://www.groningerforum.nl/">Groninger Forum</a>, the old Forum Images building, in Groningen.</p>
+                    <p>Groninger Forum is a cultural living and working environment. A place where artists, creative people, entrepreneurs and enthusiasts can meet. A perfect spot for PyGrunn! It is a 3-minute walk from the central train station and in the heart of the city.</p>
+                    <dl class="uk-description-list">
+                        <dt>Address</dt><dd>Hereplein 73, 9711 GD Groningen</dd>
+                        <dt>Phone</dt><dd>+31 50 312 0433</dd>
+                    </dl>
+                </div>
+                <div>
+                    <iframe class="uk-display-inline-block with-shadow uk-iframe" width="650" height="450" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2389.229039563185!2d6.56732708584506!3d53.213741552525384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd5415af180f%3A0x65968e2a9c8e427!2sHereplein+73!5e0!3m2!1sen!2s!4v1391815059572"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="tickets" class="block with-border">
+    <div class="uk-container uk-container-center">
+        <section class="tickets">
+            <div class="uk-text-center"><i class="uk-icon-ticket uk-icon-large uk-icon-heading"></i></div>
+            <h1 class="uk-text-center uk-heading-large">Tickets</h1>
+            <div id="tickets-info" class="uk-text-center uk-margin-large-top">
+                <iframe class="uk-width-small-2-3 uk-container-center" height="760px"
+                        src="https://frontoffice.paylogic.nl/?event_id=128375&point_of_sale_id=12818">
+                </iframe>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="schedule" class="block text-contrast bg-dark with-border">
+    <div class="uk-container uk-container-center">
+        <section class="schedule">
+            <div class="uk-text-center"><i class="uk-icon-calendar uk-icon-large uk-icon-heading uk-icon-heading-dark"></i></div>
+            <h1 class="uk-text-center uk-heading-large">Schedule 2019</h1>
+            <div class="uk-text-center">
+                <iframe class="uk-display-inline-block with-shadow uk-iframe" width="752" height="800" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQm-1DoobV_8IHH4N4B7WHcEiQKZ3vYwtX56Osv2EV3qFapuq5O0VvrCvfC3G_4cB6CCkiSGkvZ-O8y/pubhtml?gid=11&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="rfp" class="block with-border">
+    <div class="uk-container uk-container-center">
+        <section class="rfp">
+            <div class="uk-text-center"><i class="uk-icon-lightbulb-o uk-icon-large uk-icon-heading"></i></div>
+            <h1 class="uk-text-center uk-heading-large">Request For Proposals 2019</h1>
+            <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-text-justify">
+                <div class="uk-text-justify uk-margin-large-top">
+                    <p>
+                       This year's RFP is closed and all the speaker slots are filled. Please try again next year since we'd love to hear from you!
+                       Please mail any questions and/or remarks regarding the RFP to <a href="mailto:info@pygrunn.org">info@pygrunn.org
+                    </a>.
+                </div>
+                <!-- <div class="uk-text-justify uk-margin-large-top">
+                    <p>This is your chance to share your work with the PyGrunn community!
+                    Let us know your proposal for a talk at PyGrunn 2019.</p>
+
+                    <p>All talks are 30 minutes and should inspire, impress and inform.
+                    Try to use the full 30 minutes to inspire your audience and save the
+                    discussions for the time between talks.</p>
+                    <h2>Topics</h2>
+                    <p>As the tagline says, PyGrunn is about Python and friends, so talks don't
+                    have to be about Python per se. But they should have some connection to Python.
+                    The audience is technically quite skilled so adjust your talk accordingly.</p>
+                    <p><strong>Speakers get free access</strong>. You don't have to buy a ticket if you
+                    speak at PyGrunn!</p>
+                    <p>Please mail any questions you may have to <a href="mailto:info@pygrunn.org">info@pygrunn.org</a>.
+                    You can send us any remarks you may have using the <i>additional information</i> field in the form.</p>
+                </div>
+                <div class="uk-text-center uk-margin-large-top">
+                    <iframe class="uk-display-inline-block with-shadow uk-iframe" width="650" height="650" src="https://docs.google.com/forms/d/e/1FAIpQLSdDYaC55uHg9RNh2YfiXwtMHbefeuixgblU4byBarhTGy-JZw/viewform?usp=sf_link"></iframe>
+                </div> -->
+        </section>
+    </div>
+</div>
+
+<div id="tips" class="block text-contrast bg-dark">
+    <div class="uk-container uk-container-center">
+        <section class="tips">
+            <div class="uk-text-center"><i class="uk-icon-check uk-icon-large uk-icon-heading uk-icon-heading-dark"></i></div>
+            <h1 class="uk-text-center uk-heading-large">Share your tips for 2019</h1>
+            <div class="uk-text-center">
+                <iframe class="uk-display-inline-block with-shadow uk-iframe" width="655" height="580" src="https://docs.google.com/forms/d/e/1FAIpQLSd2JwhAkS_oeSNZ84udCCkx9HYobsQ5cEHe21p3oubHyjcE8w/viewform?usp=sf_link"></iframe>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div id="sponsor" class="block with-border">
+    <div class="uk-container uk-container-center">
+        <section class="sponsor">
+            <div class="uk-text-center"><i class="uk-icon-thumbs-up uk-icon-large uk-icon-heading"></i></div>
+            <h1 class="uk-text-center uk-heading-large">Become A Sponsor</h1>
+            <h2 class="uk-margin-large-top">Why we need sponsors</h2>
+            <div class="uk-grid uk-grid-width-1-1 uk-grid-width-large-1-2 uk-text-justify" data-uk-grid-match data-uk-grid-margin>
+                <div>
+                    <p>Pygrunn is made possible through the efforts of volunteers, speakers and participants,
+                    but also by the financial support of a growing number of sponsors. With your contribution,
+                    within five years, Pygrunn has become the largest and most visited Python Conference
+                    in the Netherlands.</p>
+                    <p>With more than 200 participants and international speakers, for
+                    one entire day, Groningen can call itself the Python capital of the Netherlands.
+                    Your contribution would give PyGrunn a solid financial base in order to achieve everything
+                    mentioned above.</p>
+                </div>
+                <div>
+                    <p>With your contribution, we can:</p>
+                    <ul class="uk-list uk-list-space list-icon list-icon-chevron-right">
+                        <li>Keep the ticket prices low;</li>
+                        <li>Provide a decent location to host Pygrunn;</li>
+                        <li>Reimburse the travel and accommodation costs of our international speakers;</li>
+                        <li>Provide catering;</li>
+                        <li>Stream talks live for those at home;</li>
+                        <li>And of course print our extremely popular limited edition t-shirts!</li>
+                    </ul>
+                    <p>If you are interested and wish to get more information, then please contact us via <a href="mailto:info@pygrunn.org">info@pygrunn.org</a>.</p>
+                </div>
+            </div>
+            <h2>Sponsor Packages</h2>
+            <div class="uk-grid uk-grid-width-1-2 uk-grid-width-medium-1-4" data-uk-grid-margin>
+                <div>
+                    <h3>Bronze <span>(€750)</span></h3>
+                    <ul class="uk-list uk-list-space list-icon list-icon-chevron-right">
+                        <li>Small logo on the PyGrunn website linked to your own website</li>
+                        <li>Small logo on folders and banners</li>
+                        <li>2 admission tickets</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Silver <span>(€2000)</span></h3>
+                    <ul class="uk-list uk-list-space list-icon list-icon-chevron-right">
+                        <li>Your name mentioned on the PyGrunn website</li>
+                        <li>Medium logo on the PyGrunn website linked to your own website</li>
+                        <li>Medium logo on folders and banners</li>
+                        <li>Vacancy flyer</li>
+                        <li>4 admission tickets</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Gold <span>(€4000)</span></h3>
+                    <ul class="uk-list uk-list-space list-icon list-icon-chevron-right">
+                        <li>Your name mentioned on the PyGrunn website</li>
+                        <li>Introduction section about you on the PyGrunn website</li>
+                        <li>Big logo on the PyGrunn website linked to your own website</li>
+                        <li>Big logo on folders and banners</li>
+                        <li>Vacancy flyer</li>
+                        <li>Participation in organisation of PyGrunn</li>
+                        <li>6 admission tickets</li>
+                        <li>One of the venues named after you</li>
+                        <li>Reference during the Pygrunn monthly (6 times a year)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Kryptonite <span>(€7500)</span></h3>
+                    <ul class="uk-list uk-list-space list-icon list-icon-chevron-right">
+                        <li>Your name mentioned on the PyGrunn website</li>
+                        <li>Introduction section about you on the PyGrunn website</li>
+                        <li>Big logo on the PyGrunn website linked to your own website</li>
+                        <li>Big logo on folders and banners</li>
+                        <li>Vacancy flyer</li>
+                        <li>Participation in organisation of PyGrunn</li>
+                        <li>Keynote speaker</li>
+                        <li>8 admission tickets</li>
+                        <li>Main venue named after you</li>
+                        <li>Reference during the Pygrunn monthly (6 times a year)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="about" class="block text-contrast bg-dark">
+    <div class="uk-container uk-container-center">
+        <section class="about">
+            <div class="uk-text-center"><i class="uk-icon-info uk-icon-large uk-icon-heading uk-icon-heading-dark"></i></div>
+            <h1 class="uk-text-center uk-heading-large">About</h1>
+            <p class="uk-text-justify uk-margin-large-top">PyGrunn is the largest conference in The Netherlands dedicated to Python and Friends.
+            PyGrunn has always been a special gathering for enthousiasts and for those who wish
+            to share their knowledge and passion about Python and related technologies.
+            Its purpose is to provide a pleasant experience to every attendant.
+            We are both excited and proud to present our sponsors,
+            a list of former PyGrunn speakers and (if present) their recorded talk, 
+            and a few photographic moments of the latest edition of PyGrunn.
+            </p>
+            <h2>Code of Conduct</h2>
+            <p>At PyGrunn, we don't believe in the need for a formal code of conduct, as there should be no need to codify good behaviour. We expect everyone to behave with common decency and we expect that everyone is treated with equal respect. PyGrunn staff will take any measures necessary to uphold these golden rules of life.</p>
+            <h2>Sponsors</h2>
+            <h3>Kryptonite</h3>
+            <p>Your company could be here!</p>
+
+            <h3>Gold</h3>
+            <div class="uk-margin-top">
+                <a class="spindle-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="https://wearespindle.com/" target="_blank">
+                    <span>Spindle</span>
+                </a>
+                <p>
+                    Devhouse Spindle is on a mission to connect the world using open and free communication. Almost 60 colleagues are working daily on smart tools that make efficient and personal communication possible. With a love for open source software, an experimental organization model, and an international team of coworkers, Spindle is an ever-evolving and inspiring place to be.
+                </p>
+            </div>
+
+                <div>
+                <a class="media2b-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.media2b.net" title="Media2B - Software" target="_blank">
+                    <span>Media2B</span>
+                </a>
+                <p>
+                        Media2B develops software solutions that allow users to express their wish for an experience in the way they prefer. Using any combination of words, pictures, videos, sketches, music, or whatever they can express what they would like. Our software interprets this message and generates the experience. Whether the experience is purely digital, purely physical, or a mix, that is up to the user. Using the latest advances in AI and software engineering our tools make it super easy and comfortable for end users to turn their wishes into reality. No need for a middleman that interprets the wishes and constructs the experience. It is completely automated. This is more powerful, easier and avoids mistakes and misunderstandings.
+                </p>
+            </div>
+
+            <div class="uk-margin-top">
+                <a class="hugo-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://hugo.events" target="_blank">
+                    <span>Hugo</span>
+                </a>
+                <p>
+                    Hugo, a Fanbase and (email) Campaign Management platform for Organizers of Events and Festivals to measure expectation, experience and involvement of (potential) event visitors.
+                </p>
+            </div>
+            <div class="uk-margin-top">
+                <a class="paylogic-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.paylogic.com" target="_blank">
+                    <span>Paylogic</span>
+                </a>
+                <p>
+                        Paylogic creates the best possible fan experience to enable a real conversation and relationship between you and your fans.
+                </p>
+            </div>
+
+            <h3>Silver</h3>
+            <div class="uk-grid uk-grid-width-small-1-1 uk-grid-width-medium-1-4 uk-grid-width-large-1-4" data-uk-grid-margin>
+                <div>
+                    <a class="targetholding-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.target-holding.nl" title="Target Holding" target="_blank">
+                        <span>Target Holding</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="tkp-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.tkppensioen.nl" title="Target Holding" target="_blank">
+                        <span>TKP</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="dacom-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.dacom.nl" title="Dacom" target="_blank">
+                        <span>Dacom</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="groningen-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="https://gemeente.groningen.nl/" title="Gemeente Groningen" target="_blank">
+                        <span>Gemeente groningen</span>
+                    </a>
+                </div>
+            </div>
+            <h3>Bronze</h3>
+            <div class="uk-grid uk-grid-width-small-1-1 uk-grid-width-medium-1-4 uk-grid-width-large-1-4" data-uk-grid-margin>
+                <div>
+                    <a class="discogs-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.discogs.com" title="Discogs" target="_blank">
+                        <span>Discogs</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="tiqets-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.tiqets.com" title="Discogs" target="_blank">
+                        <span>Tiqets</span>
+                    </a>
+                </div>
+                <div class="uk-margin-top">
+                    <a class="satisfiedshopping-logo sponsor-img uk-display-inline-block uk-vertical-align-middle text-hidden" href="http://www.satisfiedshopping.com" target="_blank">
+                        <span>SatisfiedShopping</span>
+                    </a>
+                </div>
+            </div>
+    
+            <h2>Former Speakers</h2>
+            <h3>2017</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><span class="uk-text-bold">Kees Hink</span> - The tale of Oscar and the API</li>
+                <li><span class="uk-text-bold">Marco Vellinga</span> - Creating abstraction between consumer and datastore</li>
+                <li><span class="uk-text-bold">German Gomez-Herrero</span> - Polku: Serverless Stream Processing with Python</li>
+                <li><span class="uk-text-bold">Laurens Bosscher</span> - Advanced Django Admin</li>
+                <li><span class="uk-text-bold">Jaap Bresser</span> - Beyond Role Based Auth: Discretionary Access Control with Postgres & SQLAlchemy</li>
+                <li><span class="uk-text-bold">Maarten Brugman</span> - Docker do's and don'ts</li>
+                <li><span class="uk-text-bold">Cees van Wieringen</span> - Django L10N</li>
+                <li><span class="uk-text-bold">Kilian Evang</span> - Viasock: Automagically Serverize Your Scripts</li>
+                <li><span class="uk-text-bold">Artur Barseghyan & Job Ganzevoort</span> - Django performance unchained</li>
+                <li><span class="uk-text-bold">Berco Beute</span> - All you need is less. Rethinking big data</li>
+                <li><span class="uk-text-bold">Maarten Breddels</span> - A billion stars in the Jupyter Notebook</li>
+                <li><span class="uk-text-bold">Jonathan Barnoud</span> - Looking at molecules using Python</li>
+                <li><span class="uk-text-bold">Zakarias Nordfäldt-Laws</span> - HitWizard - Predicting the future Hit Songs</li>
+                <li><span class="uk-text-bold">Ede Meijer</span> - Deep learning with TensorFlow</li>
+                <li><span class="uk-text-bold">Òscar Vilaplana</span> - Let's make a GraphQL API in Python</li>
+                <li><span class="uk-text-bold">Jos van Bakel</span> - Functional Programming with Elm</li>
+                <li><span class="uk-text-bold">Reinout van Rees</span> - Querying Django models: fabulous & fast filtering</li>
+                <li><span class="uk-text-bold">Joshua Peper</span> - Find that 🍌 in 10 minutes using Machine Learing</li>
+                <li><span class="uk-text-bold">Google</span> - Machine Learning APIs for Python Developers</li>
+
+
+            </ul>
+            <h3>2016</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><span class="uk-text-bold">Lars de Ridder</span> - MicroPython: The Pythonic Internet of Things <a href="http://todayispotato.github.io/micropython-talk/">(slides)</a></li>
+                <li><span class="uk-text-bold">Andrii Mishkovskyi</span> - Vacation from Python</li>
+                <li><span class="uk-text-bold">Álex González</span> - Python, Kubernetes and friends</li>
+                <li><span class="uk-text-bold">Gijs Molenaar</span> - Kliko - Compute Container specification and implementation <a href="https://speakerdeck.com/gijzelaerr/pygrunn-2016-kliko-scientific-compute-container">(slides)</a></li>
+                <li><span class="uk-text-bold">Oleg Pidsadnyi</span> - Factory injection: Combining PyTest and Factoryboy</li>
+                <li><span class="uk-text-bold">Emil Loer</span> - Extending C programs with PyPy-powered code</li>
+                <li><span class="uk-text-bold">Boaz Leskes</span> - Elasticsearch for SQL users</li>
+                <li><span class="uk-text-bold">Reinout van Rees</span> - Improve your django admin: big gains with little effort</li>
+                <li><span class="uk-text-bold">Bram Noordzij & Bob Voorneveld</span> - Django Channels <a href="http://bobvoorneveld.github.io/spindlechannels/">(slides)</a></li>
+                <li><span class="uk-text-bold">Jelle Feringa</span> - PythonOCC & industrial robotics for the building industry</li>
+                <li><span class="uk-text-bold">Ben Meijering</span> - Hello, Machine Learning! <a href="https://github.com/bitwise-ben/pygrunn">(slides)</a></li>
+                <li><span class="uk-text-bold">Peter Odding & Bart Kroon</span> - Understanding PyPy and using it in production</li>
+                <li><span class="uk-text-bold">Hugo Buddelmeijer</span> - The orientation of your DAGs matter!</li>
+                <li><span class="uk-text-bold">Daan Vielen</span> - How to survive your fellow team members and managers</li>
+                <li><span class="uk-text-bold">Adam Powell & Denis Dallinga</span> - Recommendation systems @ Catawiki</li>
+                <li><span class="uk-text-bold">Dmitry Chaplinsky</span> - Python superpowers on civic society's secret service.</li>
+                <li><span class="uk-text-bold">K Rain Leander</span> - Build a Simple Cloud with TripleO Quickstart</li>
+                <li><span class="uk-text-bold">Bart Wesselink</span> - Processing large quantities of online payments</li>
+                <li><span class="uk-text-bold">Jasper Spaans</span> - From code to configuration... and back again</li>
+                <li><span class="uk-text-bold">Theo Wouters</span> - How to create an ideal development team</li>
+                <li><span class="uk-text-bold">Martijn Faassen</span> - Morepath under the hood (keynote)</li>
+                <li><span class="uk-text-bold">Steven Pemberton</span> - The future of programming (keynote)</li>
+            </ul>
+            <h3>2015</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><a href="https://www.youtube.com/watch?v=FKu09-_AaeM&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Pieter Hintjens</span> - ZeroMQ (Keynote)</a></li>
+                <li><a href="https://www.youtube.com/watch?v=-pCCtxZoCVU&index=12&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Thomas Levine</span> - Data acquisition with Vlermv database</a></li>
+                <li><a href="https://www.youtube.com/watch?v=15hlFatjWac&index=3&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Bob Voorneveld</span> - Implement Gmail api in our CRM system</a></li>
+                <li><a href="https://www.youtube.com/watch?v=17YXNSqCQOM&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=14"><span class="uk-text-bold">Jens de Smit</span> - IPython and MongoDB as big data scratchpads</a></li>
+                <li><a href="https://www.youtube.com/watch?v=k2k3kBSps3Y&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=13"><span class="uk-text-bold">Laurence de Jong</span> - Towards a web framework for distributed apps</a></li>
+                <li><a href="https://www.youtube.com/watch?v=zap_40_bb2M&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=10"><span class="uk-text-bold">Niels Hageman</span> - Reliable distributed task scheduling</a></li>
+                <li><a href="https://www.youtube.com/watch?v=3ZR25qfURkg&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=7"><span class="uk-text-bold">Saúl Ibarra Corretgé</span> - Python, WebRTC and You</a></li>
+                <li><a href="https://www.youtube.com/watch?v=mK8jflvJf8k&index=9&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">K Rain Leander</span> - Leveraging Procedural Knowledge</a></li>
+                <li><a href="https://www.youtube.com/watch?v=FTGOvut6tJE&index=16&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Ot de Wiljes</span> - Computational Neuroscience</a></li>
+                <li><a href="https://www.youtube.com/watch?v=CEFaL_WwEoI&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=18"><span class="uk-text-bold">Henk Doornbos</span> - Contract languages based on Python</a></li>
+                <li><a href="https://www.youtube.com/watch?v=RxpRl73C5eg&index=8&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Herman Balsters</span> - Python in: Processes, data, contracts</a></li>
+                <li><a href="https://www.youtube.com/watch?v=pPEIejME4_0&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=5"><span class="uk-text-bold">Dorian Hoxha</span> - Creating a high performance server in Python</a></li>
+                <li><a href="https://www.youtube.com/watch?v=sjBLMyXccoU&index=17&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Berco Beute</span> - Python in a decentralized future</a></li>
+                <li><a href="https://www.youtube.com/watch?v=DUlAQxv1quY&index=4&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Òscar Vilaplana</span> - Orchestrating Python projects using CoreOS</a></li>
+                <li><a href="https://www.youtube.com/watch?v=TxwSp-3LfDA&index=21&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Reinout van Rees</span> - Regular people behaving like programmers</a></li>
+                <li><a href="https://www.youtube.com/watch?v=D7i4Z47RV0E&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=6"><span class="uk-text-bold">Ivor Bosloper</span> - GIS in Python. Solutions and architecture trade-offs</a></li>
+                <li><a href="https://www.youtube.com/watch?v=YBuQOHohUOU&index=15&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Valentin Haenel</span> - Blosc and friends</a></li>
+                <li><a href="https://www.youtube.com/watch?v=0sf2-VLGvKc&index=11&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Emil Loer</span> - Leveraging RPython For Efficient Real-Time Audio Processing</a></li>
+                <li><a href="https://www.youtube.com/watch?v=VwYN4swvOG4&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=19"><span class="uk-text-bold">Erik Groeneveld</span> - Generators</a></li>
+                <li><span class="uk-text-bold">Lars de Ridder</span> - Advanced REST API's <a href="http://todayispotato.github.io/rest-design-talk/">(slides)</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Ts0pz_N-df8&index=2&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5"><span class="uk-text-bold">Sylvain Viollon</span> - Tornado and IO in Python 3</a></li>
+                <li><a href="https://www.youtube.com/watch?v=N-reEkGs89c&list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5&index=20"><span class="uk-text-bold">Panel</span> - Web11</a></li>
+            </ul>
+            <h3>2014</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><span class="uk-text-bold">Jeff Knupp</span> - Writing idiomatic Python (keynote)</li>
+                <li><span class="uk-text-bold">Armin Ronacher</span> - SSL, CAs and keeping your stuff safe</li>
+                <li><span class="uk-text-bold">Kenneth Reitz</span> - Documentation is King</li>
+                <li><span class="uk-text-bold">Kilian Evang</span> - Produce: Makefiles without the annoying bits</li>
+                <li><span class="uk-text-bold">Pawel Lewicki</span> - Sphinx + Robot Framework = documentation as result of functional testing</li>
+                <li><span class="uk-text-bold">Rodrigo Bernardo Pimentel</span> - A first look at async.io</li>
+                <li><span class="uk-text-bold">Guido Kollerie</span> - Slice &amp; Dice: Data Analysis using Pandas</li>
+                <li><span class="uk-text-bold">Erik Romijn</span> - Keeping Django chained: top security concerns for Django websites</li>
+                <li><span class="uk-text-bold">Valerio Basile</span> - Bad habits in academic code</li>
+                <li><span class="uk-text-bold">Gijs Molenaar</span> - SQLAlchemy and astronomical data</li>
+                <li><span class="uk-text-bold">Dmitrijs Milajevs</span> - Python for data scientists</li>
+                <li><span class="uk-text-bold">Oscar Vilaplana</span> - Scaling your system</li>
+                <li><span class="uk-text-bold">Panel</span> - Dangers of centralization. Options and solutions</li>
+                <li><span class="uk-text-bold">Saul Ibarra Corretge</span> - asyncio internals</li>
+                <li><span class="uk-text-bold">Avi Flax</span> - The impedance mismatch of web microframeworks</li>
+                <li><span class="uk-text-bold">Denis Bilenko</span> - Gevent, threads &amp; async frameworks</li>
+                <li><span class="uk-text-bold">Berco Beute</span> - Python friends: CoffeeScript &amp; AngularJS</li>
+                <li><span class="uk-text-bold">Job Ganzevoort &amp; Douwe van der Meij</span> - From zero to hero - Professional Django setup, deploy and maintain</li>
+                <li><span class="uk-text-bold">Dirk Zittersteyn</span> - Advanced continuous integration</li>
+                <li><span class="uk-text-bold">Kenneth Reitz</span> - Growing Open Source Seeds</li>
+                <li><span class="uk-text-bold">Henk Doornbos</span> - Processes, Data and the rest</li>
+                <li><span class="uk-text-bold">Greg Kowal</span> - Geoprocessing with python</li>
+                <li><span class="uk-text-bold">Artur Barseghyan</span> - Modern authentication in Python web applications</li>
+            </ul>
+            <h3>2013</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><span class="uk-text-bold">Holger Krekel</span> - Re-inventing Python packaging &amp; testing (keynote)</li>
+                <li><span class="uk-text-bold">Daniël &amp; Gideon de Kok</span> - What Python can learn from Haskell</li>
+                <li><span class="uk-text-bold">Luuk van der Velden</span> - Best practices for the lone coder syndrome</li>
+                <li><span class="uk-text-bold">Peter Odding</span> - Reliable deployment of large Python applications</li>
+                <li><span class="uk-text-bold">Oscar Vilaplana</span> - Handling massive traffic with Python</li>
+                <li><span class="uk-text-bold">Álex González</span> - Python and Scala smoke the peace pipe</li>
+                <li><span class="uk-text-bold">Berco Beute</span> - REST API design</li>
+                <li><span class="uk-text-bold">Armin Ronacher</span> - A year with MongoDB</li>
+                <li><span class="uk-text-bold">Oleg Pidsadnyi</span> - Behaviour driven design with PyTest</li>
+                <li><span class="uk-text-bold">Remco Wendt</span> - Component architectures in Python</li>
+                <li><span class="uk-text-bold">Mark Vletter</span> - Lean prototyping</li>
+                <li><span class="uk-text-bold">Emil Loer</span> - Python raytracing</li>
+                <li><span class="uk-text-bold">Douwe van der Meij</span> - MVC revisited with Diazo</li>
+                <li><span class="uk-text-bold">Jan-Jaap Driessen</span> - Fan/theme</li>
+                <li><span class="uk-text-bold">Gijs Molenaar</span> - LOFAR &lt;3 Python</li>
+                <li><span class="uk-text-bold">Alessandro Molina</span> -  High Performance Web Applications with Python and TurboGears</li>
+                <li><span class="uk-text-bold">Dmitrijs Milajevs</span> - Real Time discussion retrieval from Twitter</li>
+                <li><span class="uk-text-bold">Kenneth Reitz</span> - Python for humans</li>
+            </ul>
+            <h3>2012</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><span class="uk-text-bold">Michael Bayer</span> - SQLAlchemy (keynote)</li>
+                <li><span class="uk-text-bold">Bram Noordzij</span> - Amazon Web Services. The good, bad &amp; ugly</li>
+                <li><span class="uk-text-bold">Alexandros Kanterakis</span> - PyPedia</li>
+                <li><span class="uk-text-bold">Oleg Pidsadnyi</span> - Large number of markers on Google Maps</li>
+                <li><span class="uk-text-bold">Emil Loer</span> - Musical Python</li>
+                <li><span class="uk-text-bold">Douwe van der Meij</span> - AOP in Python API design</li>
+                <li><span class="uk-text-bold">Remco Wendt</span> - Profiling</li>
+                <li><span class="uk-text-bold">Miguel Araujo</span> - Django Uni-forms</li>
+                <li><span class="uk-text-bold">Henk Doornbos &amp; Berco Beute</span> - Chronic Pythonic</li>
+                <li><span class="uk-text-bold">Ivor Bosloper</span> - GeoDjango</li>
+                <li><span class="uk-text-bold">Oscar Vilaplana</span> - Tornado in depth</li>
+                <li><span class="uk-text-bold">Laurence de Jong</span> - Continuous integration</li>
+                <li><span class="uk-text-bold">Alexander Solovyov</span> - Go: Python + /theme typing?</li>
+                <li><span class="uk-text-bold">Niels Hageman</span> - Distributed job scheduling</li>
+                <li><span class="uk-text-bold">Armin Ronacher</span> - A fresh look at HTTP from Python</li>
+                <li><span class="uk-text-bold">Reinout van Rees</span> - Optimize &amp; automate your Python life</li>
+                <li><span class="uk-text-bold">Dan Tofan &amp; Spyros Ioakeimidis</span> - Python tools for making architectural decisions</li>
+                <li><span class="uk-text-bold">Rick Oost</span> - Generalized traversals</li>
+            </ul>
+            <h3>2011</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><span class="uk-text-bold">Armin Ronacher</span> - The state of Python and the web (keynote)</li>
+                <li><span class="uk-text-bold">Henk Doorbos</span> - Making large, untested code bases testable</li>
+                <li><span class="uk-text-bold">Reinout van Rees</span> - Practical project automation</li>
+                <li><span class="uk-text-bold">Jobert Abma</span> - The ten commandments of Security</li>
+                <li><span class="uk-text-bold">Berco Beute</span> - Growing up Pythonically</li>
+                <li><span class="uk-text-bold">Alexander Solovyov</span> - hg and complex development processes</li>
+                <li><span class="uk-text-bold">Òscar Vilaplana</span> - ØMQ</li>
+                <li><span class="uk-text-bold">Pieter Noordhuis</span> - Redis in practice</li>
+                <li><span class="uk-text-bold">Duco Dokter</span> - NLTK: natural language processing with Python</li>
+                <li><span class="uk-text-bold">Gideon de Kok &amp; Tom de Vries</span> - Mobile Architectures</li>
+                <li><span class="uk-text-bold">Kim Chee Leong</span> - Buildout</li>
+                <li><span class="uk-text-bold">Emil Loer</span> - Embeddng Python interpreter in Ruby and vice versa</li>
+                <li><span class="uk-text-bold">Rix Groenboom</span> - MijnOverheid: performance testing in practice</li>
+            </ul>
+            <h3>2010</h3>
+            <ul class="uk-list uk-list-space list-col-2 list-icon list-icon-chevron-right">
+                <li><span class="uk-text-bold">Ivan Sagalaev</span> (keynote)</li>
+                <li><span class="uk-text-bold">Ivan Metzlar</span></li>
+                <li><span class="uk-text-bold">Erik Huisman &amp; Aldert Greydanus</span></li>
+                <li><span class="uk-text-bold">Michiel Prins &amp; Jobert Abma</span></li>
+                <li><span class="uk-text-bold">Tom de Vries &amp; Gideon de Kok</span></li>
+                <li><span class="uk-text-bold">Oscar Vilaplana</span></li>
+                <li><span class="uk-text-bold">Oleg Pidsadnyi</span></li>
+                <li><span class="uk-text-bold">Merijn Terheggen</span> - Minimal Viable Products</li>
+                <li><span class="uk-text-bold">Henk Doornbos</span> - Python and hardware programming</li>
+                <li><span class="uk-text-bold">Berco Beute</span> - A Python's Life?</li>
+                <li><span class="uk-text-bold">Bart jan Wesselink</span> - Advanced Payment Routing</li>
+                <li><span class="uk-text-bold">Tim Bakker</span> - Green Parking</li>
+            </ul>
+            <h2>Photographic Moments of PyGrunn 2015</h2>
+            <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-3" data-uk-grid-margin>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_1.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_1.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_6.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_6.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_4.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_4.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_5.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_5.jpg" height=>
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-3" data-uk-grid-margin>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_2.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_2.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_3.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_3.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_7.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_7.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_8.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_8.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_9.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_9.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_10.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_10.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_11.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_11.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_13.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_13.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="with-full-border">
+                        <a class="fancybox uk-overlay with-shadow" rel="pg_group" href="/theme/images/gallery/2015/pygrunn_12.jpg">
+                            <img src="/theme/images/gallery/2015/pygrunn_12.jpg">
+                            <div class="uk-overlay-area"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="movies" class="block with-border">
+    <div class="uk-container uk-container-center">
+        <section class="movies">
+            <div class="uk-text-center"><i class="uk-icon-video-camera uk-icon-large uk-icon-heading"></i></div>
+
+            <h1 class="uk-text-center uk-heading-large">Movies 2016</h1>
+            <div class="uk-grid uk-grid-width-1-1 uk-text-center" data-uk-grid-margin>
+                <div>
+                    <iframe class="uk-iframe" width="640" height="390" src="https://www.youtube.com/embed/jmmTsnKLULw?list=PLFxMLyzsWeqoZj2wME-xoMaYN2EOWoLEg" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <h1 class="uk-text-center uk-heading-large">Movies 2015</h1>
+            <div class="uk-grid uk-grid-width-1-1 uk-text-center" data-uk-grid-margin>
+                <div>
+                    <iframe class="uk-iframe" width="640" height="390" src="https://www.youtube.com/embed/videoseries?list=PLFxMLyzsWeqr4SCyx0ZmFkVz2vZJk_CI5" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <h1 class="uk-text-center uk-heading-large">Movies 2014</h1>
+            <div class="uk-grid uk-grid-width-1-1 uk-text-center" data-uk-grid-margin>
+                <div>
+                    <h2>Jeff Knupp - Keynote: Writing Idiomatic Python</h2>
+                    <iframe class="uk-iframe" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/8eBHHhMqkDc" frameborder="0"></iframe>
+                </div>
+                <div>
+                    <h2>Armin Ronacher - SSL, CAs and keeping your stuff safe</h2>
+                    <iframe class="uk-iframe" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/z80s_Iaoyuw" frameborder="0"></iframe>
+                </div>
+                <div>
+                    <h2>Avi Flax - The impedance mismatch of Web Microframeworks</h2>
+                    <iframe class="uk-iframe" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/HGpDHBzErkg" frameborder="0"></iframe>
+                </div>
+                <div>
+                    <h2>Saúl Ibarra Corretgé - asyncio internals</h2>
+                    <iframe class="uk-iframe" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/HppNu0-ANYw" frameborder="0"></iframe>
+                </div>
+                <div>
+                    <h2>Oscar Vilaplana - Scaling your system</h2>
+                    <iframe class="uk-iframe" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/i4qkGxlPXwU" frameborder="0"></iframe>
+                </div>
+                <div>
+                    <h2>Panel Discussion - Dangers of centralization. Options and solutions.</h2>
+                    <iframe class="uk-iframe" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/oKBdhhac3Rs" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+    <div id="footer" class="block-small">
+        <div class="uk-container uk-container-center">
+            <section class="footer uk-text-center">
+                &copy;2019 PyGrunn
+            </section>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/theme/javascript/uikit.min.js"></script>
+    <script src="/theme/javascript/sticky.min.js"></script>
+    <script src="/theme/javascript/jquery.fancybox.pack.js"></script>
+    <script src="/theme/javascript/application.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-48221565-2', 'pygrunn.org');
+        ga('send', 'pageview');
+    </script>
+    <!-- <script type="text/javascript" src="//quriobot.com/widget/pygrunn"></script> -->
+
+</body>
+
+</html>
